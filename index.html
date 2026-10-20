@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Rivera — Fictional Portfolio</title>
+  <meta name="description" content="Fictional portfolio created for website practice: Alex Rivera, a third-year computer science student working on LLM security, hallucination evaluation, and trustworthy AI.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <p class="notice" role="note">
+    <strong>Fictional portfolio created for website practice.</strong>
+    All credentials, organizations, projects, reviews, and testimonials are invented.
+  </p>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="wordmark" href="#top" aria-label="Alex Rivera, back to top">Alex Rivera</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="more">
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-list">More</button>
+            <ul id="more-list" class="more-list">
+              <li><a href="#themes">Focus</a></li>
+              <li><a href="#venture">VerityLayer</a></li>
+              <li><a href="#awards">Awards</a></li>
+              <li><a href="#mentorship">Mentorship</a></li>
+              <li><a href="#talks">Talks</a></li>
+            </ul>
+          </li>
+          <li class="nav-contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-solid btn-sm cta-top" href="#contact">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Third-year CS student · MIT · B.S. expected May 2027 <span class="fict">(fictional profile)</span></p>
+          <h1 id="hero-title">Alex Rivera</h1>
+          <p class="lead">Testing language models against prompt injection, and checking whether each claim in an answer is supported by its sources.</p>
+          <p class="intro">
+            I study
+            <a class="claim" href="#themes">LLM security<sup>1</sup></a>
+            and
+            <a class="claim" href="#research">hallucination evaluation<sup>2</sup></a>,
+            build tools that make model behavior
+            <a class="claim" href="#projects">easier to inspect<sup>3</sup></a>,
+            and turn promising research ideas into practical prototypes.
+          </p>
+          <p class="legend">Highlighted claims link to the work behind them.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#research">Explore my research</a>
+            <a class="btn btn-ghost" href="#projects">See selected projects</a>
+            <a class="btn btn-ghost" href="resume-sample.pdf" download>Download résumé<span class="sr-only"> (PDF, fictional sample)</span></a>
+          </div>
+        </div>
+
+        <figure class="portrait" id="portrait">
+          <picture>
+            <source srcset="Project2.webp" type="image/webp">
+            <img src="Project2.png" width="1214" height="1295" decoding="async" fetchpriority="high"
+                 alt="Fictional portfolio portrait of Alex Rivera: a smiling young man with dark wavy hair and glasses, wearing a black sweater, seated in front of a bookshelf.">
+          </picture>
+          <div class="portrait-missing" aria-hidden="true"><span>Portrait placeholder</span></div>
+          <figcaption>Fictional portrait for this practice portfolio</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- THEMES -->
+    <section class="section" id="themes" aria-labelledby="themes-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Focus</p>
+          <h2 id="themes-title">Three questions behind the work</h2>
+          <p class="section-intro">How language models fail, how those failures can be measured, and how safer systems can be built around them.</p>
+        </header>
+        <ul class="grid grid-3 themes">
+          <li class="card">
+            <h3>LLM security</h3>
+            <p>How tool-using agents can be steered by untrusted content, and which simple defenses help in a controlled setting.</p>
+            <p class="rel"><span>Related</span> <a href="#paper-injection">Prompt-injection study</a> · <a href="#project-promptfence">PromptFence</a></p>
+          </li>
+          <li class="card">
+            <h3>Hallucination evaluation</h3>
+            <p>Checking whether each claim in an answer is supported by its sources, not only whether the answer reads well.</p>
+            <p class="rel"><span>Related</span> <a href="#paper-evidence">Evidence Before Fluency</a> · <a href="#paper-taxonomy">hallucination taxonomy</a> · <a href="#project-claimcheck">ClaimCheck</a></p>
+          </li>
+          <li class="card">
+            <h3>Trustworthy AI</h3>
+            <p>Communicating uncertainty, knowing when to abstain, and showing sources so people can judge how far to trust an answer.</p>
+            <p class="rel"><span>Related</span> <a href="#paper-abstention">Abstention poster</a> · <a href="#exp-fellow">uncertainty-message study</a> · <a href="#project-abstainwell">AbstainWell</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Selected research</p>
+          <h2 id="research-title">Four pieces of fictional research</h2>
+          <p class="section-intro">Titles, statuses, and findings are mock data. None of these are peer-reviewed publications, and there are no papers to download.</p>
+        </header>
+        <ol class="grid grid-2 papers">
+          <li class="card paper" id="paper-evidence">
+            <p class="meta"><span class="tag">Research paper</span> <span>2026 · Submitted to a fictional student research workshop</span></p>
+            <h3>“Evidence Before Fluency: Measuring Unsupported Claims in Retrieval-Augmented Language Models”</h3>
+            <dl>
+              <div><dt>Contribution</dt><dd>Co-designed a test set where retrieved documents are incomplete, conflicting, or irrelevant, then compared answer correctness with whether each claim was actually supported by the sources.</dd></div>
+              <div><dt>Takeaway</dt><dd>A fluent answer can still overstate what its sources establish; claim-level evidence checks make that gap easier to see.</dd></div>
+            </dl>
+          </li>
+          <li class="card paper" id="paper-injection">
+            <p class="meta"><span class="tag">Preprint</span> <span>2025 · Fictional</span></p>
+            <h3>“Prompt Injection Across the Tool Boundary: A Small-Scale Study of Agent Defenses”</h3>
+            <dl>
+              <div><dt>Contribution</dt><dd>Built a controlled set of indirect prompt-injection scenarios for tool-using agents and compared simple isolation and tool-permission strategies.</dd></div>
+              <div><dt>Takeaway</dt><dd>Narrow tool permissions and explicit separation of untrusted content reduced successful attacks in the study’s toy environment.</dd></div>
+            </dl>
+          </li>
+          <li class="card paper" id="paper-abstention">
+            <p class="meta"><span class="tag">Poster</span> <span>2025 · Fictional MIT Undergraduate Research Symposium</span></p>
+            <h3>“When ‘I Don’t Know’ Helps: Calibrating Abstention in Student-Facing Assistants”</h3>
+            <dl>
+              <div><dt>Contribution</dt><dd>Evaluated when an educational assistant should answer, cite a source, or abstain, using a small synthetic question set and a human review rubric.</dd></div>
+              <div><dt>Takeaway</dt><dd>Abstention quality depends on giving users a useful next step, not simply refusing uncertain questions.</dd></div>
+            </dl>
+          </li>
+          <li class="card paper" id="paper-taxonomy">
+            <p class="meta"><span class="tag">Technical report</span> <span>2024 · Fictional</span></p>
+            <h3>“A Practical Taxonomy of Hallucination Reports for Product Teams”</h3>
+            <dl>
+              <div><dt>Contribution</dt><dd>Organized user-reported failures into categories such as unsupported detail, source mismatch, stale information, and false certainty.</dd></div>
+              <div><dt>Takeaway</dt><dd>A consistent taxonomy helps teams prioritize fixes and compare failures across product releases.</dd></div>
+            </dl>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Experience</p>
+          <h2 id="experience-title">Research roles, newest first</h2>
+          <p class="section-intro">All groups, programs, and mentors are fictional and imply no real endorsement.</p>
+        </header>
+        <ol class="trail">
+          <li>
+            <p class="when">Sep 2025 – Present</p>
+            <div class="body">
+              <h3>Undergraduate Research Assistant</h3>
+              <p class="org">Trustworthy Language Systems Group · fictional MIT group</p>
+              <ul>
+                <li>Prototyped evaluation scripts for measuring claim support in retrieval-augmented model answers.</li>
+                <li>Reviewed model outputs and tagged evidence gaps using a shared annotation guide.</li>
+                <li>Presented a monthly progress update and helped prepare a fictional workshop submission.</li>
+                <li>Worked under the supervision of fictional Professor Maya Chen.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p class="when">Jun – Aug 2025</p>
+            <div class="body">
+              <h3>Research Intern</h3>
+              <p class="org">Secure AI Systems Lab · fictional summer research program</p>
+              <ul>
+                <li>Implemented test cases for indirect prompt injection in tool-using language-model agents.</li>
+                <li>Compared defensive configurations in a controlled sandbox and documented limitations.</li>
+                <li>Co-wrote an internal fictional report with two other student researchers.</li>
+                <li>Mentored by fictional Professor Daniel Brooks.</li>
+              </ul>
+            </div>
+          </li>
+          <li id="exp-fellow">
+            <p class="when">Jan – May 2025</p>
+            <div class="body">
+              <h3>Student Research Fellow</h3>
+              <p class="org">Human-Centered AI Initiative · fictional MIT program</p>
+              <ul>
+                <li>Helped design a small study on how uncertainty messages affect user trust in AI answers.</li>
+                <li>Prepared interview materials and summarized feedback from a fictional pilot group.</li>
+                <li>Built a demo that displayed source links alongside individual answer claims.</li>
+                <li>Mentored by fictional Professor Elena Morales.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Selected projects</p>
+          <h2 id="projects-title">Tools for inspecting model behavior</h2>
+          <p class="section-intro">Fictional prototypes. There are no live demos or public repositories.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="security" aria-pressed="false">Security</button>
+          <button type="button" class="chip" data-filter="evaluation" aria-pressed="false">Evaluation</button>
+          <button type="button" class="chip" data-filter="tools" aria-pressed="false">Developer tools</button>
+        </div>
+        <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+
+        <ul class="grid grid-2 projects">
+          <li class="card project" id="project-claimcheck" data-tags="evaluation tools">
+            <p class="meta"><span class="tag">Hackathon prototype</span> <span>Not a production product</span></p>
+            <h3>ClaimCheck</h3>
+            <p>A developer tool that highlights claims in a generated answer and links each claim to supporting or conflicting passages.</p>
+            <p class="rel"><span>Award</span> Grand Prize, MIT AI Reliability Hackathon 2026 (fictional)</p>
+          </li>
+          <li class="card project" id="project-promptfence" data-tags="security tools">
+            <p class="meta"><span class="tag">Test harness</span> <span>Fictional</span></p>
+            <h3>PromptFence</h3>
+            <p>A test harness for creating repeatable indirect prompt-injection cases and recording whether an agent attempted an unsafe tool action.</p>
+            <p class="rel"><span>Award</span> First Place, Safety Track, Boston Responsible AI Sprint 2025 (fictional)</p>
+          </li>
+          <li class="card project" id="project-abstainwell" data-tags="evaluation">
+            <p class="meta"><span class="tag">Q&amp;A demo</span> <span>Fictional</span></p>
+            <h3>AbstainWell</h3>
+            <p>An educational Q&amp;A demo that compares answer, cite, and abstain choices and asks reviewers to rate whether the next step is useful.</p>
+            <p class="rel"><span>Award</span> Best Research Prototype, Northeast Collegiate Hackfest 2025 (fictional)</p>
+          </li>
+          <li class="card project" id="project-veritylayer" data-tags="evaluation tools">
+            <p class="meta"><span class="tag">Product prototype</span> <span>Prototype stage</span></p>
+            <h3>VerityLayer</h3>
+            <p>A product prototype for reviewing unsupported claims in language-model applications.</p>
+            <p class="rel"><a href="#venture">Read about the venture ↓</a></p>
+          </li>
+        </ul>
+        <p class="empty" id="filter-empty" hidden>No projects match this filter.</p>
+      </div>
+    </section>
+
+    <!-- ENTREPRENEURSHIP -->
+    <section class="section" id="venture" aria-labelledby="venture-title">
+      <div class="container">
+        <div class="venture">
+          <div class="venture-copy">
+            <p class="label label-light">Entrepreneurship</p>
+            <h2 id="venture-title">VerityLayer</h2>
+            <p class="tagline">Build with language models. Verify what they say.</p>
+            <p class="role">Co-founder and Product Lead · fictional student venture · 2025 – Present</p>
+            <p>An early-stage project exploring lightweight reliability checks for teams building language-model applications. The prototype flags answer claims that lack clear support in retrieved documents and gives developers a review queue for uncertain outputs.</p>
+            <ul>
+              <li>Led discovery conversations with a fictional set of student developers and early-stage founders.</li>
+              <li>Turned recurring needs into a clickable prototype and a small API demo.</li>
+              <li>Worked with a two-person engineering team on evidence highlighting and review workflows.</li>
+            </ul>
+            <p class="stage"><strong>Current stage: prototype.</strong> No real customers, funding, or commercial deployment are claimed.</p>
+          </div>
+          <ol class="flow" aria-label="How the VerityLayer prototype works">
+            <li><span>Answer claim</span> flagged in a generated answer</li>
+            <li><span>Support check</span> against retrieved documents</li>
+            <li><span>Review queue</span> for uncertain outputs</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section" id="awards" aria-labelledby="awards-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Hackathons &amp; awards</p>
+          <h2 id="awards-title">Eight fictional wins</h2>
+          <p class="section-intro">Event names are invented for this mockup and have no affiliation with, or endorsement from, any real event or organization.</p>
+        </header>
+        <ol class="awards">
+          <li><span class="yr">2026</span><span class="ev">MIT AI Reliability Hackathon</span><span class="aw">Grand Prize</span><span class="pj"><a href="#project-claimcheck"><b>ClaimCheck</b></a> — claim-level source verification dashboard</span></li>
+          <li><span class="yr">2025</span><span class="ev">Boston Responsible AI Sprint</span><span class="aw">First Place, Safety Track</span><span class="pj"><a href="#project-promptfence"><b>PromptFence</b></a> — prompt-injection test harness</span></li>
+          <li><span class="yr">2025</span><span class="ev">Northeast Collegiate Hackfest</span><span class="aw">Best Research Prototype</span><span class="pj"><a href="#project-abstainwell"><b>AbstainWell</b></a> — uncertainty-aware Q&amp;A demo</span></li>
+          <li><span class="yr">2025</span><span class="ev">Build for Good Boston</span><span class="aw">Winner, Education Track</span><span class="pj"><b>StudySignal</b> — study assistant that shows evidence and uncertainty</span></li>
+          <li><span class="yr">2024</span><span class="ev">HackMIT</span><span class="aw">Best Use of Open Data</span><span class="pj"><b>SourceTrail</b> — visual map of answer claims to documents</span></li>
+          <li><span class="yr">2024</span><span class="ev">Harvard Tech for Society Hackathon</span><span class="aw">First Place</span><span class="pj"><b>ModelIncident</b> — lightweight AI incident-reporting workflow</span></li>
+          <li><span class="yr">2024</span><span class="ev">New England Security Jam</span><span class="aw">Best Student Team</span><span class="pj"><b>RedTeamKit</b> — starter suite for testing conversational AI applications</span></li>
+          <li><span class="yr">2023</span><span class="ev">Cambridge AI Builders Challenge</span><span class="aw">Judges’ Choice</span><span class="pj"><b>ContextCard</b> — browser mockup for inspecting AI answer sources</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <header class="section-head">
+            <p class="label">About</p>
+            <h2 id="about-title">From “it sounds right” to measurably reliable</h2>
+          </header>
+          <p>Alex is pursuing a B.S. in Computer Science at MIT, expected May 2027, and is based in Cambridge, Massachusetts. He became interested in language-model reliability after seeing how confident, plausible answers can still be wrong.</p>
+          <p>Since then he has focused on testing model behavior under adversarial prompts, tracing claims to source material, and communicating uncertainty to users. Outside the lab, he enjoys turning research prototypes into useful products and has co-founded a small student venture exploring reliability tools for AI developers.</p>
+          <p>His long-term goal is to help research labs and product teams move from “the model seems to work” to measurable, monitorable reliability.</p>
+          <p class="fine">Degree and institution are part of the fictional profile; MIT has not endorsed this page.</p>
+        </div>
+        <div class="skills">
+          <h3 class="sr-only">Skills</h3>
+          <dl>
+            <div><dt>Research</dt><dd>Experimental design · literature review · benchmark construction · error analysis · paper writing</dd></div>
+            <div><dt>AI and security</dt><dd>LLM red-teaming · prompt injection testing · hallucination measurement · retrieval-augmented generation · citation and provenance checks</dd></div>
+            <div><dt>Engineering</dt><dd>Python · PyTorch · TypeScript · FastAPI · PostgreSQL · Docker · Git</dd></div>
+            <div><dt>Product and entrepreneurship</dt><dd>User interviews · prototyping · product discovery · technical demos · early-stage startup planning</dd></div>
+            <div><dt>Communication</dt><dd>Research presentations · technical writing · peer mentoring · workshop facilitation</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORSHIP -->
+    <section class="section" id="mentorship" aria-labelledby="mentorship-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Mentorship &amp; feedback</p>
+          <h2 id="mentorship-title">From Research Question to First Experiment</h2>
+          <p class="section-intro">A fictional student mentorship session, March 2026.</p>
+        </header>
+        <div class="session card">
+          <ul class="facts" aria-label="Session details">
+            <li><b>75 min</b> session</li>
+            <li><b>14</b> fictional undergraduates</li>
+            <li><b>March 2026</b></li>
+            <li>Fictional MIT AI Research Circle</li>
+          </ul>
+          <p>Alex led a session on turning a broad AI reliability topic into a testable research question. It covered narrowing the scope, writing a simple baseline, choosing meaningful failure cases, and keeping a research log. Attendees worked in pairs to sketch a small experiment and received feedback on feasibility.</p>
+        </div>
+        <h3 class="sub">Fictional sample feedback <span>Invented copy, not real reviews or endorsements</span></h3>
+        <ul class="grid grid-3 quotes">
+          <li><blockquote><p class="q-kind">Fictional sample session review</p><p>“Alex made the research process feel approachable. I left with a question I could actually test and a clear first experiment.”</p><footer>Jamie L., fictional second-year student</footer></blockquote></li>
+          <li><blockquote><p class="q-kind">Fictional sample testimonial</p><p>“Alex is unusually good at connecting careful evaluation with the product decision a team needs to make. He brings a clear experiment, communicates the limits, and follows through.”</p><footer>Fictional research mentor, Trustworthy Language Systems Group</footer></blockquote></li>
+          <li><blockquote><p class="q-kind">Fictional sample testimonial</p><p>“Alex asks the right questions about how a tool might fail in practice. His mix of technical depth and product judgment made him a strong contributor to our prototype.”</p><footer>Fictional startup advisor</footer></blockquote></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TALKS -->
+    <section class="section section-tight" id="talks" aria-labelledby="talks-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="label">Talks &amp; workshops</p>
+          <h2 id="talks-title">Sharing what I learn</h2>
+        </header>
+        <ul class="talks">
+          <li><span class="yr">2026</span><span><b>“Testing What the Model Claims”</b> — fictional MIT AI Research Circle lightning talk</span></li>
+          <li><span class="yr">2025</span><span><b>“A First Red-Team Pass for Tool-Using LLMs”</b> — fictional Boston student security meetup</span></li>
+          <li><span class="yr">2025</span><span><b>“Make Uncertainty Useful”</b> — fictional undergraduate research workshop</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="label">Contact</p>
+          <h2 id="contact-title">Have a reliability problem worth investigating?</h2>
+          <p>Alex is always interested in conversations with research labs and product teams working on safer, more dependable AI systems.</p>
+          <p>He is looking for research internships, undergraduate research roles, and early-career opportunities in AI security, model evaluation, trustworthy AI, and developer tools.</p>
+        </div>
+        <div class="contact-card card">
+          <p class="k">Email</p>
+          <p class="email">alex.rivera@example.com</p>
+          <p class="fine">Fictional placeholder address. This page has no contact form and sends no messages.</p>
+          <a class="btn btn-ghost btn-sm" href="resume-sample.pdf" download>Download résumé<span class="sr-only"> (PDF, fictional sample)</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Fictional portfolio created for website practice.</strong> All credentials, organizations, projects, reviews, and testimonials are invented. MIT, HackMIT, Harvard, and other names appear only as fictional context; no logos are used and nothing here is endorsed by any organization.</p>
+      <p class="fine">Alex Rivera is a fictional person. The portrait is a fictional image.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
